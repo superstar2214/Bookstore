@@ -12,6 +12,39 @@
 <body>
   <div class="container">
     <h1>Bookstore</h1>
+
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <select id="category-filter" class="form-select" aria-label="Filter by category">
+          <option value="All">All Categories</option>
+          <option value="UX">UX</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JavaScript">JavaScript</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <input type="text" id="author-filter" class="form-control" placeholder="Filter by author">
+      </div>
+      <div class="col-md-4">
+        <input type="number" id="min-price" class="form-control" placeholder="Min price">
+        <input type="number" id="max-price" class="form-control" placeholder="Max price">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <select id="sort-by" class="form-select" aria-label="Sort by">
+          <option value="title-asc">Title (Ascending)</option>
+          <option value="title-desc">Title (Descending)</option>
+          <option value="price-asc">Price (Ascending)</option>
+          <option value="price-desc">Price (Descending)</option>
+          <option value="author-asc">Author (Ascending)</option>
+          <option value="author-desc">Author (Descending)</option>
+        </select>
+      </div>
+    </div>
+
     <div id="book-list" class="row"></div>
   </div>
 
