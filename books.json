@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Responsive Design with Bootstrap",
     "author": "Kotayba",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vitae justo eu dignissim. Fusce scelerisque euismod justo, ac maximus justo pulvinar nec.",
+    "description": "Responsive design is crucial in today's web development landscape, adapting websites to various devices' screen sizes. Bootstrap, a popular framework, simplifies creating responsive and mobile-first sites. The necessity for responsive design arises from the diverse range of devices accessing web content, each with its unique dimensions. Achieving responsiveness involves techniques like using relative size units, breakpoints, and semantic designs. Despite the complexity, tools like Bootstrap streamline this process. Bootstrap offers pre-built components and layouts for responsive UIs, making it a favorite among developers and a common topic in job interviews. Its advantages include ease of use and quick website development, but it can slow down loading times and requires CSS and HTML proficiency.",
     "category": "UX",
     "price": 19.99,
     "image": "https://picsum.photos/200/300/?random=1"
@@ -12,7 +12,7 @@
     "id": 2,
     "title": "HTML - An Introduction",
     "author": "Kotayba",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vitae justo eu dignissim. Fusce scelerisque euismod justo, ac maximus justo pulvinar nec.",
+    "description": "HTML serves as the fundamental markup language for crafting web pages and applications, forming a crucial trio alongside CSS and JavaScript in web technology. Web browsers interpret HTML documents received from servers or local storage, transforming them into interactive web pages. HTML not only defines the structural layout of a webpage but also initially governed its visual appearance. Within HTML, there are two main types of tags: block-level and inline tags. Block-level tags start on a new line and occupy the full width available, while inline tags only take up necessary width. For instance, the '{div}' tag represents a block-level element, while the '{span}' tag denotes an inline element. A typical HTML page structure comprises the '{html}', '{head}', and '{body}' tags. The '{head}' section contains metadata like '{link}' tags for external resources, '{script}' tags for JavaScript, and '{title}' for the page's title. In contrast, the '{body}' section encompasses content visible to users, including '{h1}' for headings, '{p}' for paragraphs, '{img}' for images, and more. Each HTML tag may also include attributes, offering supplementary information about the element. Attributes reside within the opening tag, enclosed in double quotes. For example, the 'src' attribute in the '{img}' tag specifies the image source. Certain tags possess built-in interactivity, such as '{button}' and '{a}' tags, capable of triggering events upon user interaction. HTML's indispensability is evident in modern website design, with some native apps utilizing HTML abstraction for content presentation.",
     "category": "HTML",
     "price": 24.99,
     "image": "https://picsum.photos/200/300/?random=2"
@@ -21,7 +21,7 @@
     "id": 3,
     "title": "CSS - An Introduction",
     "author": "Kotayba",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vitae justo eu dignissim. Fusce scelerisque euismod justo, ac maximus justo pulvinar nec.",
+    "description": "CSS, short for Cascading Style Sheets, plays a vital role in enhancing the visual appeal of web pages. Unlike basic HTML pages, which lack styling, CSS empowers designers to tailor the appearance of HTML elements. It operates on a rule-based system, where selectors target specific elements to apply styles. These styles encompass various attributes such as width, height, color, and shape, alongside modern features like animations, shadows, and gradients. CSS offers a range of measurement units, from static options like pixels to dynamic and responsive units like rems and vh. However, CSS implementation can vary across browsers, leading to inconsistencies in rendering. To address this issue, CSS preprocessors like SASS or LESS come into play. These preprocessors introduce advanced features such as variables, mixins, and nesting, enhancing code readability and maintainability. Fundamentally, CSS operates within a box model paradigm, where each HTML element is treated as a box with defined dimensions, padding, margin, and border. Understanding and leveraging the box model is essential for creating responsive and visually appealing websites.",
     "category": "CSS",
     "price": 29.99,
     "image": "https://picsum.photos/200/300/?random=3"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "JavaScript - An Introduction",
     "author": "Kotayba",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vitae justo eu dignissim. Fusce scelerisque euismod justo, ac maximus justo pulvinar nec.",
+    "description": "JavaScript is a versatile programming language primarily employed in web development. Created by Brendan Eich in a remarkably short span of 10 days, it draws syntactical inspiration from Java, reflecting the programming trends of its era. JavaScript embraces a curly-brace syntax and accommodates various programming paradigms including object-oriented, functional, and procedural approaches. Initially confined to browser environments, JavaScript's utility expanded with the emergence of tools like Node.js and Deno, facilitating server-side execution. Currently, JavaScript ranks as the seventh most widely used language globally, serving as a cornerstone in modern web development. Despite its flexibility, JavaScript doesn't impose a singular programming paradigm, yet supports object-oriented patterns alongside treating functions as first-class citizens akin to functional programming languages. The language features three primitive data types: numbers, strings, and booleans, alongside null and undefined as trivial datatypes, and arrays and objects as complex datatypes. JavaScript includes essential built-in functions like Math, Date, and MapSets, and provides access to browser functionality via objects like Window, Document, Navigator, Location, WebSocket, and Fetch API. JavaScript's significance extends to its extensive library ecosystem, integral to numerous web frameworks such as React, Angular, and Vue. Additionally, full-stack frameworks like Next.js and Nuxt.js contribute to JavaScript's robust ecosystem. Moreover, languages like Elm are designed to compile to JavaScript, further enhancing its versatility and applicability across diverse environments and frameworks. JavaScript remains a cornerstone in modern web development, powering numerous applications and frameworks across various domains.",
     "category": "JavaScript",
     "price": 14.99,
     "image": "https://picsum.photos/200/300/?random=4"
@@ -39,7 +39,7 @@
     "id": 5,
     "title": "Book 5",
     "author": "Author 5",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vitae justo eu dignissim. Fusce scelerisque euismod justo, ac maximus justo pulvinar nec.",
+    "description": "This book offers a comprehensive introduction to responsive design principles, delving into fundamental concepts such as fluid grids, flexible images, and media queries. Readers will find actionable guidance on creating responsive websites capable of seamlessly adapting to diverse device types and screen sizes, ensuring optimal user experience across the board. Whether you're a novice or seasoned designer, this resource equips you with practical strategies to craft responsive designs that effectively engage users across various devices.",
     "category": "UX",
     "price": 34.99,
     "image": "https://picsum.photos/200/300/?random=5"
