@@ -44,9 +44,9 @@ function addToCart(book) {
   renderCart();
 }
 
-function removeFromCart(bookTitle) {
+function removeCartItem(bookTitle) {
   cartItems = cartItems.filter(item => item.title !== bookTitle);
-  renderCart();
+  openCartModal();
 }
 
 function renderCart() {
@@ -155,6 +155,7 @@ function openCartModal() {
       <div>
         <p>${item.title} - Quantity: ${item.quantity}</p>
         <p>Total Price: $${(item.quantity * item.price).toFixed(2)}</p>
+        <button class="btn btn-danger btn-sm" onclick="removeCartItem('${item.title}')">Remove</button>
       </div>
     `;
   });
@@ -162,6 +163,7 @@ function openCartModal() {
 
   cartModal.show();
 }
+
 
 function calculateCartTotal() {
   let cartTotal = 0;
