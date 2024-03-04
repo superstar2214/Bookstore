@@ -39,7 +39,7 @@
     "id": 5,
     "title": "Book 5",
     "author": "Author 5",
-    "description": "This book offers a comprehensive introduction to responsive design principles, delving into fundamental concepts such as fluid grids, flexible images, and media queries. Readers will find actionable guidance on creating responsive websites capable of seamlessly adapting to diverse device types and screen sizes, ensuring optimal user experience across the board. Whether you're a novice or seasoned designer, this resource equips you with practical strategies to craft responsive designs that effectively engage users across various devices.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vitae justo eu dignissim. Fusce scelerisque euismod justo, ac maximus justo pulvinar nec.",
     "category": "UX",
     "price": 34.99,
     "image": "https://picsum.photos/200/300/?random=5"

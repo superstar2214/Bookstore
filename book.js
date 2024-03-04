@@ -1,10 +1,14 @@
 let booksData = [];
+let cart = [];
+
 
 fetch('books.json')
   .then(response => response.json())
   .then(data => {
     booksData = data;
     renderBooks(booksData);
+
+
   })
   .catch(error => console.error('Error fetching book data:', error));
 
@@ -31,6 +35,52 @@ function renderBooks(books) {
     `;
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const addToCartButtons = document.querySelectorAll('.btn-primary');
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', function (event) {
+      const bookTitle = event.target.dataset.bookTitle;
+      const book = booksData.find(book => book.title === bookTitle);
+      addToCart(book);
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const categoryFilter = document.getElementById('category-filter');
+  const authorFilter = document.getElementById('author-filter');
+  const minPriceInput = document.getElementById('min-price');
+  const maxPriceInput = document.getElementById('max-price');
+  const sortBySelect = document.getElementById('sort-by');
+
+  // Event listener for category filter
+  categoryFilter.addEventListener('change', function () {
+    filterByCategory(categoryFilter.value);
+  });
+
+  // Event listener for author filter
+  authorFilter.addEventListener('input', function () {
+    filterByAuthor(authorFilter.value);
+  });
+
+  // Event listeners for min and max price inputs
+  minPriceInput.addEventListener('input', applyPriceFilter);
+  maxPriceInput.addEventListener('input', applyPriceFilter);
+
+  // Event listener for sorting
+  sortBySelect.addEventListener('change', function () {
+    sortBooks(sortBySelect.value);
+  });
+});
+
+// Function to apply price filter
+function applyPriceFilter() {
+  const minPrice = document.getElementById('min-price').value;
+  const maxPrice = document.getElementById('max-price').value;
+  filterByPrice(minPrice, maxPrice);
+}
+
 
 
 
@@ -109,35 +159,48 @@ function sortByPrice(order) {
   renderBooks(sortedBooks);
 }
 
-function addToCart(bookTitle) {
-  const book = booksData.find(book => book.title === bookTitle);
-  if (book) {
-    const existingItem = shoppingCart.find(item => item.title === book.title);
-    if (existingItem) {
-      existingItem.quantity++;
-    } else {
-      shoppingCart.push({ ...book, quantity: 1 });
-    }
-    renderCart();
+function calculateTotalItems() {
+  let totalItems = 0;
+  for (let i = 0; i < cart.length; i++) {
+    totalItems += cart[i].qty;
   }
+  return totalItems;
+}
+
+
+function addToCart(book) {
+  // Increment quantity if the same title is added
+  if (cart.find(item => item.title === book.title)) {
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].title === book.title) {
+        cart[i].qty++;
+        break;
+      }
+    }
+  } else { // Otherwise, add the book to the cart array
+    cart.push({ title: book.title, qty: 1, price: book.price });
+  }
+
+  // Update cart display
+  document.querySelector(".navbar-cart").innerHTML = `<i class="bi bi-cart">${calculateTotalItems()}</i>`;
 }
 
 function renderCart() {
   const cartList = document.getElementById('cart-list');
   cartList.innerHTML = '';
 
-  shoppingCart.forEach(item => {
+  cart.forEach(item => { // Change 'shoppingCart' to 'cart'
     cartList.innerHTML += `
       <div class="row mb-3">
         <div class="col">${item.title}</div>
-        <div class="col">${item.quantity}</div>
+        <div class="col">${item.qty}</div> <!-- Change 'item.quantity' to 'item.qty' -->
         <div class="col">$${item.price}</div>
-        <div class="col">$${item.quantity * item.price}</div>
+        <div class="col">$${item.qty * item.price}</div> <!-- Change 'item.quantity' to 'item.qty' -->
       </div>
     `;
   });
 
-  const totalPrice = shoppingCart.reduce((total, item) => total + (item.price * item.quantity), 0);
+  const totalPrice = cart.reduce((total, item) => total + (item.price * item.qty), 0); // Change 'shoppingCart' to 'cart'
   cartList.innerHTML += `
     <div class="row">
       <div class="col"></div>
@@ -147,6 +210,7 @@ function renderCart() {
     </div>
   `;
 }
+
 
 function toggleDetails(bookTitle) {
   const description = document.getElementById(`description-${bookTitle}`);
